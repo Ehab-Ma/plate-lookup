@@ -1,0 +1,1 @@
+export function normalizePlate(raw){ return String(raw||'').replace(/\D/g,''); }

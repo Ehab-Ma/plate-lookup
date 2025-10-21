@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* page */
+html, body, #root { height: 100%; }
+
+/* soft mint-to-sky gradient */
+.page-bg {
+  @apply min-h-screen;
+  background: radial-gradient(1100px 600px at 70% -200px, #e9f7ff 0%, transparent 60%),
+              radial-gradient(1200px 500px at -150px 50%, #ecfff6 0%, transparent 60%),
+              #f6fbff;
+}
+
+/* a centered, max-width container card */
+.container-card { @apply max-w-5xl mx-auto p-4 md:p-6; }
+
+/* Card + section */
+.card { @apply bg-white/90 backdrop-blur rounded-2xl border border-slate-200 shadow-sm; }
+.card:hover { @apply shadow-md; }
+.card--search {
+  position: sticky;
+  top: 0.5rem;        /* tweak as you like */
+  z-index: 40;        /* ensures this card sits above the rest */
+}
+.card {
+  overflow: visible;
+}
+.search-popover {
+  z-index: 60;        /* higher than .card--search */
+}
+.section { @apply p-5 md:p-6; }
+.section-title { @apply text-xl md:text-2xl font-bold text-slate-900; }
+
+/* Badges & chips */
+.badge { @apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium border border-slate-200 bg-white text-slate-700; }
+.chip  { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium bg-slate-100 text-slate-700; }
+.chip--ok { @apply bg-emerald-50 text-emerald-700 border border-emerald-200; }
+
+/* Sparkline */
+.sparkline { @apply w-full h-28 mt-2 text-sky-600; }
+
+/* Tables */
+.table { @apply min-w-full border border-slate-200 bg-white rounded-xl overflow-hidden; }
+.table thead { @apply bg-slate-50; }
+.table th { @apply text-right text-sm text-slate-600 px-3 py-2 border-b border-slate-200 font-medium; }
+.table td { @apply px-3 py-2 border-b border-slate-100 text-sm; }
+
+/* Plate display extras (drop-shadow only; your component handles layout) */
+.plate-shadow { filter: drop-shadow(0 4px 10px rgba(0,0,0,0.12)); }

@@ -1,0 +1,1 @@
+export default function Badge({children}){return <span className='badge bg-gray-50'>{children}</span>;}
