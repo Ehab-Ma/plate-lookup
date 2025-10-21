@@ -87,7 +87,7 @@ export default function App() {
         )}
 
         <footer className="mt-10 text-sm text-slate-500 text-center">
-          נבנה באהבה ל־Open Data. מתאים לקו״ח ולפורטפוליו.
+          Developed by Ehab 
         </footer>
       </div>
     </div>
