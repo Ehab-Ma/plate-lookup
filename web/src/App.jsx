@@ -86,9 +86,15 @@ export default function App() {
           </>
         )}
 
-        <footer className="mt-10 text-sm text-slate-500 text-center">
-          Developed by Ehab 
+        <footer style={{
+            textAlign: 'center',
+            fontSize: '0.9rem',
+            opacity: 0.8,
+            padding: '16px 0'
+            }}>
+                  Developed by Ehab
         </footer>
+
       </div>
     </div>
   );
