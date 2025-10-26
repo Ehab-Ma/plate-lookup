@@ -1,9 +1,8 @@
-export default async function handler(req, res) {
-  const { plate } = req.query;
-
+module.exports = async (req, res) => {
   try {
+    const { plate } = req.query;
     res.status(200).json({ plate, history: [], ok: true });
   } catch (err) {
-    res.status(500).json({ error: "Server error", details: err.message });
+    res.status(500).json({ error: err?.message || "Server error" });
   }
-}
+};
